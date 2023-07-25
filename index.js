@@ -1,16 +1,22 @@
-let firstName = "Bro"
-let age;
-let student = true
-age = 24;
+let students = 20
+console.log(students)
 
-console.log("Hello", firstName)
-console.log("you are" , age, "years old")
-age = age + 1
-console.log("Enrolled:", student)
-console.log(age)
+students += 1
+console.log(students)
 
-document.getElementById("p1").innerHTML = "Hello " + firstName
-document.getElementById("p2").innerHTML = "You are " + age + " years old"
-document.getElementById("p3").innerHTML = "Enrolled: " + student
+students -= 1
+console.log(students)
+
+students *= 2
+console.log(students)
+
+students /= 2 
+console.log(students)
+
+let extraStudents = students % 3
+console.log(extraStudents)
 
 
+
+let result = 1 + 2 * (3 + 4)
+console.log(result)
