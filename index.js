@@ -1,22 +1,10 @@
-let students = 20
-console.log(students)
+//let usename = window.prompt("What`s youe name?")
+//console.log(usename)
 
-students += 1
-console.log(students)
+let username
 
-students -= 1
-console.log(students)
-
-students *= 2
-console.log(students)
-
-students /= 2 
-console.log(students)
-
-let extraStudents = students % 3
-console.log(extraStudents)
-
-
-
-let result = 1 + 2 * (3 + 4)
-console.log(result)
+document.getElementById("myButton").onclick = function(){
+    username = document.getElementById("myText").value
+    console.log(username)
+    document.getElementById("myLabel").innerHTML = "Hello " + username
+}
