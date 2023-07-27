@@ -1,27 +1,34 @@
-let age = 24
 
-/*if (age >= 18){
+document.getElementById("myButton").onclick = function(){
 
-    console.log("You are old!")
+    const myCheckBox = document.getElementById("myCheckBox")
+    const visaBtn = document.getElementById("visaBtn")
+    const masterBtn = document.getElementById("masterBtn")
+    const paypalBtn = document.getElementById("paypalBtn")
 
-}else if (age < 0){
 
-    console.log("YOU HAVEN`T BEEN BORN YET!")
+    if(myCheckBox.checked){
+        console.log("Yoy are subscribed!")
+    }else{
+        console.log("Yoy are NOT subscribed!")
+    }
 
-}else if (age >= 65){
+    if(visaBtn.checked){
 
-    console.log("You are a senior citizen")
+        console.log("You are paying with a Visa")
 
-}else{
+    }else if(masterBtn.checked){
 
-    console.log("You are a child!")
+        console.log("You are paying with a MasterCard")
 
-}*/
+    }else if(paypalBtn.checked){
 
-let online = true
+        console.log("You are paying with a PayPal")
 
-if(online){
-    console.log("You are online!")
-}else{
-    console.log("You are offline!")
+    }else{
+
+        console.log("tou must select a payment type!")
+        
+    }
+
 }
