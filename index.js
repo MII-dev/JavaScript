@@ -1,18 +1,20 @@
 
-let x 
-let y
-let z
+let userName = "Ihor Mal"
+let phoneNumber = "123-456-7890"
+
+/*
+console.log(userName.length)
+console.log(userName.charAt(0))
+console.log(userName.indexOf("o"))
+console.log(userName.lastIndexOf("o"))
+*/
+
+//userName = userName.trim()      // "      Ihor Mal" -> "Ihor Mal"
+userName = userName.toUpperCase() // Ihor Mal -> IHOR MAL
+userName = userName.toLowerCase() // Ihor Mal -> ihor mal
+
+phoneNumber = phoneNumber.replaceAll("-", "") // 123-456-7890 -> 1234567890
 
 
-document.getElementById("rollButton").onclick = function(){
-
-    x = Math.floor(Math.random() * 6) + 1
-    y = Math.floor(Math.random() * 6) + 1
-    z = Math.floor(Math.random() * 6) + 1
-
-
-    document.getElementById("xLabel").innerHTML = x
-    document.getElementById("yLabel").innerHTML = y
-    document.getElementById("zLabel").innerHTML = z
-
-}
+console.log(userName)
+console.log(phoneNumber)
