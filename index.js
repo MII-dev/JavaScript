@@ -1,20 +1,27 @@
+let age = 24
 
-let userName = "Ihor Mal"
-let phoneNumber = "123-456-7890"
+/*if (age >= 18){
 
-/*
-console.log(userName.length)
-console.log(userName.charAt(0))
-console.log(userName.indexOf("o"))
-console.log(userName.lastIndexOf("o"))
-*/
+    console.log("You are old!")
 
-//userName = userName.trim()      // "      Ihor Mal" -> "Ihor Mal"
-userName = userName.toUpperCase() // Ihor Mal -> IHOR MAL
-userName = userName.toLowerCase() // Ihor Mal -> ihor mal
+}else if (age < 0){
 
-phoneNumber = phoneNumber.replaceAll("-", "") // 123-456-7890 -> 1234567890
+    console.log("YOU HAVEN`T BEEN BORN YET!")
 
+}else if (age >= 65){
 
-console.log(userName)
-console.log(phoneNumber)
+    console.log("You are a senior citizen")
+
+}else{
+
+    console.log("You are a child!")
+
+}*/
+
+let online = true
+
+if(online){
+    console.log("You are online!")
+}else{
+    console.log("You are offline!")
+}
