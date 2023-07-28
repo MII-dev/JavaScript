@@ -1,17 +1,13 @@
 
 
-for(let i = 1; i<=20; i++){
-    if(i == 13){
-        break
-    }
-    console.log(i)
-}
+let rows = window.prompt("Enter # of rows")
+let columns = window.prompt("Enter # of columns")
+let symbol = window.prompt("Enter a symbol to use")
 
-console.log("!!!NEW LOOP!!!")
 
-for(let i = 1; i<=20; i++){
-    if(i == 13){
-        continue
+for(let i = 1; i<=rows; i++){
+    for(let j = 1; j<=columns; j++){
+        document.getElementById("myRectangle").innerHTML += symbol
     }
-    console.log(i)
+    document.getElementById("myRectangle").innerHTML += "<br>"
 }
