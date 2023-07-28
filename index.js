@@ -1,34 +1,23 @@
+let grade = 59
 
-document.getElementById("myButton").onclick = function(){
+switch(true){
 
-    const myCheckBox = document.getElementById("myCheckBox")
-    const visaBtn = document.getElementById("visaBtn")
-    const masterBtn = document.getElementById("masterBtn")
-    const paypalBtn = document.getElementById("paypalBtn")
-
-
-    if(myCheckBox.checked){
-        console.log("Yoy are subscribed!")
-    }else{
-        console.log("Yoy are NOT subscribed!")
-    }
-
-    if(visaBtn.checked){
-
-        console.log("You are paying with a Visa")
-
-    }else if(masterBtn.checked){
-
-        console.log("You are paying with a MasterCard")
-
-    }else if(paypalBtn.checked){
-
-        console.log("You are paying with a PayPal")
-
-    }else{
-
-        console.log("tou must select a payment type!")
-        
-    }
-
+    case grade >= 90:
+        console.log("You did great!")
+        break
+    case grade >= 80:
+        console.log("You did good!")
+        break
+    case grade >= 70:
+        console.log("You did okay!")
+        break
+    case grade >= 60:
+        console.log("You passed ... barely!")
+        break    
+    case grade < 60:
+        console.log("You FAILED!")
+        break
+    default:
+        console.log(grade, "is not a letter grade")
+    
 }
