@@ -8,13 +8,11 @@ document.getElementById("submitButton").onclick = function(){
 
     guesses++
 
-    if(guess == answer){
-        alert(`${answer} is the #. It took you ${guesses} guesses`)
-    }
-    else if(guess < answer){
+    if (guess == answer) {
+        alert(`${ answer } is the #. It took you ${ guesses } guesses`)
+    } else if (guess < answer) {
         alert("Too small!")
-    }
-    else{
+    } else {
         alert("Too large!")
     }
 
