@@ -23,6 +23,20 @@ console.log(length)
 let index = fruits.indexOf("orange")
 console.log(index)
 
+fruits.unshift("mango")         
+
+    for(let fruit of fruits){
+        console.log(fruit)
+    }
+
+console.log(" ")
+
+fruits = fruits.sort()
+
+    for(let fruit of fruits){
+        console.log(fruit)
+    }
+
 
 
 
