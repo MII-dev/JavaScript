@@ -1,41 +1,28 @@
 
-document.getElementById("submitButton").onclick = function() {
+let fruits = ["apple", "orange", "banana"]
+console.log(fruits)
 
-    let temp
+fruits[0] = "coconut"
+console.log(fruits)
 
-    if (document.getElementById("cButton").checked) {
+fruits.push("lemon")            // add an element
+console.log(fruits)
 
-        temp = document.getElementById("textBox").value
-        temp = Number(temp)
-        temp = toCelsius(temp)
-        document.getElementById("tempLabel").innerHTML = temp + "°C"
+fruits.pop()                    // removes last element
+console.log(fruits)
 
-    } else if (document.getElementById("fButton").checked) {
+fruits.unshift("mango")         // add element to beginning
+console.log(fruits)
 
-        temp = document.getElementById("textBox").value
-        temp = Number(temp)
-        temp = toFahrenheit(temp)
-        document.getElementById("tempLabel").innerHTML = temp + "°F"
+fruits.shift()                  // removes element from beginning
+console.log(fruits)
 
-    } else {
-        document.getElementById("tempLabel").innerHTML = "Select a unit"
-    }
+let length = fruits.length
+console.log(length)
 
-
-
-
-}
+let index = fruits.indexOf("orange")
+console.log(index)
 
 
-let temp = 32
-temp = toFahrenheit(temp)
-console.log(temp)
 
 
-function toCelsius(temp){
-    return (temp - 32) * (5/9)
-}
-
-function toFahrenheit(temp){
-    return temp * 9 / 5 + 32
-}
