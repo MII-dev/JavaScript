@@ -1,42 +1,15 @@
 
-let fruits = ["apple", "orange", "banana"]
-console.log(fruits)
 
-fruits[0] = "coconut"
-console.log(fruits)
+let fruits =        ["apples",  "oranges",  "bananas"]
+let vegetables =    ["carrots", "onions",   "potatoes"]
+let meats =         ["eggs",    "chicken",  "fish"]
 
-fruits.push("lemon")            // add an element
-console.log(fruits)
+let groceryList = [fruits, vegetables, meats]
 
-fruits.pop()                    // removes last element
-console.log(fruits)
+groceryList[2][2] = "steak"
 
-fruits.unshift("mango")         // add element to beginning
-console.log(fruits)
-
-fruits.shift()                  // removes element from beginning
-console.log(fruits)
-
-let length = fruits.length
-console.log(length)
-
-let index = fruits.indexOf("orange")
-console.log(index)
-
-fruits.unshift("mango")         
-
-    for(let fruit of fruits){
-        console.log(fruit)
+for(let list of groceryList){
+    for(let food of list){
+        console.log(food)
     }
-
-console.log(" ")
-
-fruits = fruits.sort()
-
-    for(let fruit of fruits){
-        console.log(fruit)
-    }
-
-
-
-
+}
