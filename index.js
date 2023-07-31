@@ -1,28 +1,23 @@
 
-let fruits = ["apple", "orange", "banana"]
-console.log(fruits)
+let prices = [5, 10, 15, 20, 25]
 
-fruits[0] = "coconut"
-console.log(fruits)
+for(let i = 0; i < prices.length; i++){
 
-fruits.push("lemon")            // add an element
-console.log(fruits)
+    console.log(prices[i])
 
-fruits.pop()                    // removes last element
-console.log(fruits)
+}
 
-fruits.unshift("mango")         // add element to beginning
-console.log(fruits)
+console.log("!!!NEW LOOP!!!")
 
-fruits.shift()                  // removes element from beginning
-console.log(fruits)
+for(let i = prices.length - 1; i >= 0; i--){
 
-let length = fruits.length
-console.log(length)
+    console.log(prices[i])
 
-let index = fruits.indexOf("orange")
-console.log(index)
+}
 
+console.log("!!!NEW LOOP!!!")
 
-
+for(let price of prices){
+    console.log(price)
+}
 
