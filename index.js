@@ -1,12 +1,19 @@
 
-let students = ["spongebob", "patrick", "squidward"]
+let numbers = [1, 2, 3, 4, 5]
+let spuares = numbers.map(square)
+let cubes = numbers.map(cube)
 
-students.forEach(capitalize)
-students.forEach(print)
+spuares.forEach(print)
+cubes.forEach(print)
 
-function capitalize(element, index, array){
-    array[index] = element[0].toUpperCase() + element.substring(1)
+function square(element){
+    return Math.pow(element,2)
 }
+
+function cube(element){
+    return Math.pow(element,3)
+}
+
 
 function print(element){
     console.log(element)
