@@ -1,31 +1,18 @@
 
-let a = 1
-let b = 2
-let c = 3
-let d = 4
-let e = 5
+sum(2,3, displayConsole, displayDOM)
 
-/*console.log(sum(a, b, c, d))        // (a,b)/(a,b,c) = NaN
-
-function sum(a, b){
-    return a + b
+function sum(x, y, ...callbacks){
+    let result = x + y
+    for(let callback of callbacks){
+        callback(result)
+    }
+    
 }
 
-function sum(a, b, c){
-    return a + b + c
+function displayConsole(output){
+    console.log(output)
 }
 
-function sum(a, b, c, d){
-    return a + b + c + d
-}*/
-
-console.log(sum(a, b, c, d, e))        
-
-function sum(...numbers){
-    let total = 0
-        for(let number of numbers){
-            total += number
-        }
-        return total
+function displayDOM(output){
+    document.getElementById("myLabel").innerHTML = output
 }
-
