@@ -1,19 +1,12 @@
 
-let numbers = [1, 2, 3, 4, 5]
-let spuares = numbers.map(square)
-let cubes = numbers.map(cube)
+let ages = [18, 16, 21, 17, 19, 90]
+let adults = ages.filter(checkAge)
 
-spuares.forEach(print)
-cubes.forEach(print)
+adults.forEach(print)
 
-function square(element){
-    return Math.pow(element,2)
+function checkAge(element) {
+    return element >= 18
 }
-
-function cube(element){
-    return Math.pow(element,3)
-}
-
 
 function print(element){
     console.log(element)
