@@ -1,20 +1,31 @@
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-console.log(...numbers)
+let a = 1
+let b = 2
+let c = 3
+let d = 4
+let e = 5
 
-let userName = "Ihor Mal"
-console.log(...userName)
+/*console.log(sum(a, b, c, d))        // (a,b)/(a,b,c) = NaN
 
-let maximum = Math.max(numbers)
-console.log(maximum)
-maximum = Math.max(...numbers)
-console.log(maximum)
+function sum(a, b){
+    return a + b
+}
 
-let class1 = ["Spongebob", "Patrick", "Sandy"]
-let class2 = ["Squidward", "Mr.Krabs", "Plankton"]
+function sum(a, b, c){
+    return a + b + c
+}
 
-class1.push(class2)
-console.log(class1)
-class1 = ["Spongebob", "Patrick", "Sandy"]
-class1.push(...class2)
-console.log(class1)
+function sum(a, b, c, d){
+    return a + b + c + d
+}*/
+
+console.log(sum(a, b, c, d, e))        
+
+function sum(...numbers){
+    let total = 0
+        for(let number of numbers){
+            total += number
+        }
+        return total
+}
+
