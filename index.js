@@ -1,10 +1,22 @@
 
-let prices = [5, 10, 15, 20, 25]
-let total = prices.reduce(checkOut)
+let grades = [100, 50, 90, 60, 80, 70]
 
-console.log(`The total is: $${total}`)
+grades = grades.sort(descendingSort)
+grades.forEach(print)
 
+console.log("!!!NEW SORT!!!")
 
-function checkOut(total, element){
-    return total + element
+grades = grades.sort(ascendingSort)
+grades.forEach(print)
+
+function descendingSort(x, y){
+    return y - x
+}
+
+function ascendingSort(x, y){
+    return x - y
+}
+
+function print(element){
+    console.log(element)
 }
