@@ -1,18 +1,13 @@
 
-sum(2,3, displayConsole, displayDOM)
+let students = ["spongebob", "patrick", "squidward"]
 
-function sum(x, y, ...callbacks){
-    let result = x + y
-    for(let callback of callbacks){
-        callback(result)
-    }
-    
+students.forEach(capitalize)
+students.forEach(print)
+
+function capitalize(element, index, array){
+    array[index] = element[0].toUpperCase() + element.substring(1)
 }
 
-function displayConsole(output){
-    console.log(output)
-}
-
-function displayDOM(output){
-    document.getElementById("myLabel").innerHTML = output
+function print(element){
+    console.log(element)
 }
