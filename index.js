@@ -49,7 +49,5 @@ function isNumber(element){
 
 
 
-document.getElementById("input").innerHTML = tokens 
-document.getElementById("result").innerHTML = result 
-document.getElementById("count").innerHTML = result 
+document.getElementById("input").innerHTML = tokens
 document.getElementById("answer").innerHTML = numbers
