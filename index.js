@@ -1,22 +1,55 @@
 
-let grades = [100, 50, 90, 60, 80, 70]
+let tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
+let result = 0
+let numbers = []
 
-grades = grades.sort(descendingSort)
-grades.forEach(print)
 
-console.log("!!!NEW SORT!!!")
 
-grades = grades.sort(ascendingSort)
-grades.forEach(print)
+for(let i = 0; i < tokens.length; i++){
 
-function descendingSort(x, y){
-    return y - x
+    if(isNumber(tokens[i])){
+        numbers.push(tokens[i])
+        console.log(numbers)
+    } else {
+            result = calculate(tokens[i], Number(numbers[numbers.length-2]), Number(numbers[numbers.length-1]))
+            console.log(result)
+            numbers.pop()
+            numbers.pop()
+            numbers.push(result)
+            console.log(numbers)
+        }
+    }
+
+
+
+function calculate(operator, num1, num2){
+    console.log(num1, operator, num2)
+    
+    switch (operator) {
+        case '+':
+          return num1 + num2;
+        case '-':
+          return num1 - num2;
+        case '*':
+          return num1 * num2;
+        case '/':
+            if (num1 < 0 || num2 < 0) {
+                return Math.trunc(num1 / num2);
+            } else {
+                return Math.trunc(num1 / num2)
+            }
+        default:
+          return NaN;
+    }
 }
 
-function ascendingSort(x, y){
-    return x - y
+function isNumber(element){
+    return !isNaN(element)
 }
 
-function print(element){
-    console.log(element)
-}
+
+
+document.getElementById("input").innerHTML = tokens 
+document.getElementById("result").innerHTML = result 
+document.getElementById("count").innerHTML = result 
+document.getElementById("answer").innerHTML = numbers
