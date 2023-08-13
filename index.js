@@ -1,25 +1,41 @@
 
-class Player{
-    score = 0
+class Student{
 
-    pause(){
-        console.log("You paused the game")
+    constructor(name, age, gpa){
+        this.name = name
+        this.age = age
+        this.gpa = gpa
     }
-    exit(){
-        console.log("You exited the game")
+
+    study(){
+        console.log(`${this.name} is studying`)
     }
 
 }
 
-const player1 = new Player()
-const player2 = new Player()
+const student1 = new Student("Ihor", 24, 3.2)
+const student2 = new Student("Patrick", 35, 1.5)
+const student3 = new Student("Sandy", 27, 4.0)
 
 
-player1.score += 1
 
-console.log(player1.score)
-console.log(player2.score)
+console.log(student1.name)
+console.log(student1.age)
+console.log(student1.gpa)
+
+student1.study()
+
+console.log(student2.name)
+console.log(student2.age)
+console.log(student2.gpa)
+
+student2.study()
+
+console.log(student3.name)
+console.log(student3.age)
+console.log(student3.gpa)
+
+student3.study()
 
 
-player1.pause()
-player2.exit()
+
