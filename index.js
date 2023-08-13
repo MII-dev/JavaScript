@@ -1,30 +1,46 @@
 
-const store = new Map([
-    ["t-shirt", 20],
-    ["jeans", 30],
-    ["socks", 10],
-    ["underwear", 50],
-])
+const car1 = {
+    model:"Mustang",
+    color:"red",
+    year:2023,
 
-let shoppingCart = 0
+    drive: function(){
+        console.log("You drive a car")
+    },
+    brake: function(){
+        console.log("You step on the brakes")
+    }
 
-shoppingCart += store.get("t-shirt")
-shoppingCart += store.get("underwear")
-console.log(shoppingCart)
+}
+
+const car2 = {
+    model:"Corvett",
+    color:"blue",
+    year:2024,
+
+    drive: function(){
+        console.log("You drive a car")
+    },
+    brake: function(){
+        console.log("You step on the brakes")
+    }
+
+}
+
+console.log(car1.model)
+console.log(car1.color)
+console.log(car1.year)
+
+car1.drive()
+car1.brake()
 
 console.log("")
 
+console.log(car2.model)
+console.log(car2.color)
+console.log(car2.year)
 
-store.set("hat", 40)
-store.forEach((value, key) => console.log(`${key} - $${value}`))
-console.log(store.has("hat"))
-console.log(store.size)
+car2.drive()
+car2.brake()
 
-
-console.log("")
-
-store.delete("hat", 40)
-store.forEach((value, key) => console.log(`${key} - $${value}`))
-console.log(store.has("hat"))
-console.log(store.size)
 
