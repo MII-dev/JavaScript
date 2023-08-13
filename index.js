@@ -1,46 +1,25 @@
 
-const car1 = {
-    model:"Mustang",
-    color:"red",
-    year:2023,
+class Player{
+    score = 0
 
-    drive: function(){
-        console.log("You drive a car")
-    },
-    brake: function(){
-        console.log("You step on the brakes")
+    pause(){
+        console.log("You paused the game")
+    }
+    exit(){
+        console.log("You exited the game")
     }
 
 }
 
-const car2 = {
-    model:"Corvett",
-    color:"blue",
-    year:2024,
-
-    drive: function(){
-        console.log("You drive a car")
-    },
-    brake: function(){
-        console.log("You step on the brakes")
-    }
-
-}
-
-console.log(car1.model)
-console.log(car1.color)
-console.log(car1.year)
-
-car1.drive()
-car1.brake()
-
-console.log("")
-
-console.log(car2.model)
-console.log(car2.color)
-console.log(car2.year)
-
-car2.drive()
-car2.brake()
+const player1 = new Player()
+const player2 = new Player()
 
 
+player1.score += 1
+
+console.log(player1.score)
+console.log(player2.score)
+
+
+player1.pause()
+player2.exit()
