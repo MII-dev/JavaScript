@@ -1,20 +1,30 @@
 
-let numbers = [1, 2, 3, 4, 5]
-let spuares = numbers.map(square)
-let cubes = numbers.map(cube)
+const store = new Map([
+    ["t-shirt", 20],
+    ["jeans", 30],
+    ["socks", 10],
+    ["underwear", 50],
+])
 
-spuares.forEach(print)
-cubes.forEach(print)
+let shoppingCart = 0
 
-function square(element){
-    return Math.pow(element,2)
-}
+shoppingCart += store.get("t-shirt")
+shoppingCart += store.get("underwear")
+console.log(shoppingCart)
 
-function cube(element){
-    return Math.pow(element,3)
-}
+console.log("")
 
 
-function print(element){
-    console.log(element)
-}
+store.set("hat", 40)
+store.forEach((value, key) => console.log(`${key} - $${value}`))
+console.log(store.has("hat"))
+console.log(store.size)
+
+
+console.log("")
+
+store.delete("hat", 40)
+store.forEach((value, key) => console.log(`${key} - $${value}`))
+console.log(store.has("hat"))
+console.log(store.size)
+
