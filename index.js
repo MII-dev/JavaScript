@@ -1,41 +1,25 @@
 
-class Student{
+class Car{
 
-    constructor(name, age, gpa){
-        this.name = name
-        this.age = age
-        this.gpa = gpa
+    static numberOfCars = 0
+
+    constructor(model){
+        this.model = model
+        Car.numberOfCars += 1
     }
 
-    study(){
-        console.log(`${this.name} is studying`)
+    static startRace(){
+        console.log("3...2...1...GO!")
     }
-
 }
 
-const student1 = new Student("Ihor", 24, 3.2)
-const student2 = new Student("Patrick", 35, 1.5)
-const student3 = new Student("Sandy", 27, 4.0)
+const car1 = new Car("Mustang")
+const car2 = new Car("Corvette")
+const car3 = new Car("BMW")
+console.log(Car.numberOfCars)
+const car4 = new Car("Ferrari")
+const car5 = new Car("Lambo")
+console.log(Car.numberOfCars)
 
-
-
-console.log(student1.name)
-console.log(student1.age)
-console.log(student1.gpa)
-
-student1.study()
-
-console.log(student2.name)
-console.log(student2.age)
-console.log(student2.gpa)
-
-student2.study()
-
-console.log(student3.name)
-console.log(student3.age)
-console.log(student3.gpa)
-
-student3.study()
-
-
+Car.startRace()
 
