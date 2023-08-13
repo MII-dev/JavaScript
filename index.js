@@ -1,25 +1,62 @@
 
-class Car{
+class Animal{
+    alive = true
 
-    static numberOfCars = 0
-
-    constructor(model){
-        this.model = model
-        Car.numberOfCars += 1
+    eat(){
+        console.log(`This ${this.name} is eating`)
     }
-
-    static startRace(){
-        console.log("3...2...1...GO!")
+    sleep(){
+        console.log(`This ${this.name} is sleeping`)
     }
 }
 
-const car1 = new Car("Mustang")
-const car2 = new Car("Corvette")
-const car3 = new Car("BMW")
-console.log(Car.numberOfCars)
-const car4 = new Car("Ferrari")
-const car5 = new Car("Lambo")
-console.log(Car.numberOfCars)
 
-Car.startRace()
+class Rabbit extends Animal{
+    
+    name = "rabbit"
+
+    run(){
+        console.log(`This ${this.name} is running`)
+    }
+
+}
+
+class Fish extends Animal{
+    
+    name = "fish"
+
+    swim(){
+        console.log(`This ${this.name} is swimming`)
+    }
+
+}
+
+class Hawk extends Animal{
+    
+    name = "hawk"
+
+    fly(){
+        console.log(`This ${this.name} is flying`)
+    }
+
+}
+
+const rabbit = new Rabbit()
+const fish = new Fish()
+const hawk = new Hawk()
+
+console.log(rabbit.alive)
+rabbit.eat()
+rabbit.sleep()
+rabbit.run()
+
+console.log(fish.alive)
+fish.eat()
+fish.sleep()
+fish.swim()
+
+console.log(hawk.alive)
+hawk.eat()
+hawk.sleep()
+hawk.fly()
 
