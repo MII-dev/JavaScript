@@ -1,22 +1,40 @@
 
+
+
+const greeting = function(userName){
+    console.log(`Hello ${userName}`)
+}
+
+greeting("Ihor")
+
+const arrowGreeting = (userName) => console.log(`Hello ${userName}`)
+
+arrowGreeting("Ihor (arrow func)")
+
+
+
+
+
+const percent = function(x, y){
+    return x / y * 100
+}
+
+console.log(`${percent(75, 100)}%`)
+
+const percentArrow = (x, y) =>  x / y * 100
+
+console.log(`${percentArrow(75, 100)}% (arrow func)`)
+
+
+
+
+
+
 let grades = [100, 50, 90, 60, 80, 70]
 
-grades = grades.sort(descendingSort)
-grades.forEach(print)
+grades.sort( (x, y) => y - x)
+grades.forEach((element) => console.log(element))
 
-console.log("!!!NEW SORT!!!")
 
-grades = grades.sort(ascendingSort)
-grades.forEach(print)
 
-function descendingSort(x, y){
-    return y - x
-}
 
-function ascendingSort(x, y){
-    return x - y
-}
-
-function print(element){
-    console.log(element)
-}
