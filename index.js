@@ -1,53 +1,30 @@
 
-class Animal{
-    
-    constructor(name, age){
-        this.name = name
-        this.age = age
-    }
+class Car{
 
+        constructor(power){
+            this._gas = 25
+            this._power = power
+        }
+        get power(){
+            return `${this._power} hp`
+        }
+        get gas(){
+            return `${this._gas}L (${this._gas / 50 * 100} %)`
+        }
+
+        set gas(value){
+            if (value > 50) {
+                value = 50
+            } else if (value < 0) {
+                value = 0
+            }
+            this._gas = value
+        }
 }
 
-class Rabbit extends Animal{
-    
-    constructor(name, age, runSpeed){
-        super(name, age)
-        this.runSpeed = runSpeed
-    }
+let car = new Car(400)
 
-}
+car.gas = -100
 
-class Fish extends Animal{
-    
-    constructor(name, age, swimSpeed){
-        super(name, age)
-        this.swimSpeed = swimSpeed
-    }
-
-}
-
-class Hawk extends Animal{
-    
-    constructor(name, age, flySpeed){
-        super(name, age)
-        this.flySpeed = flySpeed
-    }
-
-}
-
-const rabbit = new Rabbit("rabbit", 1, 40)
-const fish = new Fish("fish", 2, 80)
-const hawk = new Hawk("hawk", 3, 200)
-
-console.log(rabbit.name)
-console.log(rabbit.age)
-console.log(rabbit.runSpeed)
-
-console.log(fish.name)
-console.log(fish.age)
-console.log(fish.swimSpeed)
-
-console.log(hawk.name)
-console.log(hawk.age)
-console.log(hawk.flySpeed)
-
+console.log(car.power)
+console.log(car.gas)
