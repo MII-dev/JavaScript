@@ -1,20 +1,27 @@
-// error = object with a description of something went wrong
-// throw = executes a user-defined error
 
 
-try {
-    let x = window.prompt("Enter a number")
-    x = Number(x)
 
-    if(isNaN(x)) throw "That wasn`t a nuber!"
-    if(x == "") throw "That was empty!"
+let item = "cryptocurrency"
+let price = 420.29
 
+let timer1 = setTimeout(firstMessage, 3000, item, price)
+let timer2 = setTimeout(secondMessage, 6000)
+let timer3 = setTimeout(thirdMessage, 9000)
 
-    console.log(`${x} is a number`)
+function firstMessage(item, price){
+    alert(`Buy this ${item} for $${price}`)
 }
-catch(error){
-    console.log(error)
+function secondMessage(){
+    alert(`This not a scam)`)
 }
-finally{
-    console.log("This always executes")
+function thirdMessage(){
+    alert(`!!DO IT!!`)
+}
+
+
+document.getElementById("myButton").onclick = function(){
+    clearTimeout(timer1)
+    clearTimeout(timer2)
+    clearTimeout(timer3)
+    alert(`Thanks for buying <3`)
 }
