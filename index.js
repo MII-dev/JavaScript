@@ -1,46 +1,23 @@
 
-/*const promise = new Promise((resole, reject) => {
+/*import {PI, getCircumference, getArea} from "./math_util.js"
 
-    let fileLoaded = false
+console.log(PI)
 
-    if(fileLoaded){
-        resole("File loaded")
-    }else{
-        reject("File NOT loaded")                           // THE SAME
-    }
+let circumference = getCircumference(10)                        // THE SAME
+console.log(circumference) 
 
-})
+let area = getArea(10)
+console.log(area) 
 
-promise.then(value => console.log(value))
-       .catch(error => console.log(error))*/
+*/
 
 
-async function loadFile(){
+import * as Math_util from "./math_util.js"
 
-    let fileLoaded = false
-    
-    if(fileLoaded){
-        return "File loaded"
-    }else{
-        throw "File NOT loaded"
-    }
-}
+console.log(Math_util.PI)
 
+let circumference = Math_util.getCircumference(10)
+console.log(circumference) 
 
-async function startProcess(){
-
-    try{
-        let message = await loadFile()
-        console.log(message)
-    }
-    catch(error){
-        console.log(error)
-    }
-    
-}
-
-startProcess()
-
-
-
-
+let area = Math_util.getArea(10)
+console.log(area) 
