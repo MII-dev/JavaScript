@@ -1,35 +1,27 @@
 
-const myLabel = document.getElementById("myLabel")
+/*const promise = new Promise((resole, reject) => {
 
-update()
-setInterval(update, 1000)
+    let fileLoaded = false
 
-function update(){
-
-    let date = new Date()
-    myLabel.innerHTML = formatTime(date)
-
-    function formatTime(){
-        
-        let hours = date.getHours()
-        let minutes = date.getMinutes()
-        let seconds = date.getSeconds()
-        let amOrPm = hours > 12 ? "pm" : "am"
-
-        hours = (hours % 12) || 12
-        hours = formatZeroes(hours)
-        minutes = formatZeroes(minutes)
-        seconds = formatZeroes(seconds)
-
-
-        return `${hours}:${minutes}:${seconds} ${amOrPm}`
+    if(fileLoaded){
+        resole("File loaded")
+    }else{
+        reject("File NOT loaded")
     }
 
-    function formatZeroes(time){
-        time = time.toString()
-        return time.length < 2 ? "0" + time : time
-    }
+})
+
+promise.then(value => console.log(value))
+       .catch(error => console.log(error))
+*/
 
 
+const wait = time => new Promise(resolve => {
 
-}
+    setTimeout(resolve, time)
+
+})
+
+wait(3000).then( () => console.log("Thaks for waiting!") )
+
+
