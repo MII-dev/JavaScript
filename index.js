@@ -16,8 +16,8 @@ promise.then(value => console.log(value))
 
 
 async function loadFile(){
-    
-    let fileLoaded = true
+
+    let fileLoaded = false
     
     if(fileLoaded){
         return "File loaded"
@@ -25,8 +25,22 @@ async function loadFile(){
         throw "File NOT loaded"
     }
 }
+
+
+async function startProcess(){
+
+    try{
+        let message = await loadFile()
+        console.log(message)
+    }
+    catch(error){
+        console.log(error)
+    }
     
-loadFile().then(value => console.log(value))
-          .catch(error => console.log(error))
+}
+
+startProcess()
+
+
 
 
