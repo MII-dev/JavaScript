@@ -6,22 +6,27 @@
     if(fileLoaded){
         resole("File loaded")
     }else{
-        reject("File NOT loaded")
+        reject("File NOT loaded")                           // THE SAME
     }
 
 })
 
 promise.then(value => console.log(value))
-       .catch(error => console.log(error))
-*/
+       .catch(error => console.log(error))*/
 
 
-const wait = time => new Promise(resolve => {
-
-    setTimeout(resolve, time)
-
-})
-
-wait(3000).then( () => console.log("Thaks for waiting!") )
+async function loadFile(){
+    
+    let fileLoaded = true
+    
+    if(fileLoaded){
+        return "File loaded"
+    }else{
+        throw "File NOT loaded"
+    }
+}
+    
+loadFile().then(value => console.log(value))
+          .catch(error => console.log(error))
 
 
